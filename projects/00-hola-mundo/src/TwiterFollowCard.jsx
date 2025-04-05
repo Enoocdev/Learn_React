@@ -1,8 +1,8 @@
 import './App.css'
 import { useState } from 'react'
 
-export function TwiterFollowCard( {children, userName}) {
-    const [isFollowing, setIsFollowing ] = useState(false)
+export function TwiterFollowCard( { children, userName, initialIsFollowing } ) {
+    const [isFollowing, setIsFollowing ] = useState(initialIsFollowing)
 
     const text = isFollowing ? "Siguiendo" : "Seguir";
     const buttonClassName = isFollowing ? ` tw-follow-asside-button --following` : `tw-follow-asside-button`;
@@ -22,7 +22,8 @@ export function TwiterFollowCard( {children, userName}) {
             </header>
             <aside className='tw-follow-asside' >
                 <button className={buttonClassName} onClick={handleClick}>
-                    {text}
+                    <span className='tw-button-nohovered'>{text}</span> 
+                    <span className='tw-button-isFollowing'>Dejar de seguir</span>
                 </button>
             </aside>
         </article>

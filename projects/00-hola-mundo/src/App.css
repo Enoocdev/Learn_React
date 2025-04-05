@@ -3,6 +3,7 @@
     align-items: center;
     color: #fff;
     font-size: .8rem;
+    width: 370px;
     justify-content: space-between;
 }
 
@@ -40,7 +41,7 @@
 }
 
 .tw-follow-asside-button:hover{
-    background-color: #09F;
+    opacity: .8;
 
 }
 
@@ -51,9 +52,28 @@
 }
 
 .--following:hover{
-    color: #000;
-    background: red;
+    color: red;
+    background-color: rgba(255, 0, 0, 0.2);
+    border: 1px solid red;
 }
 
+
+
+.tw-follow-asside-button.--following{
+    width: 140px;
+}
+
+
+.tw-button-isFollowing{
+    display: none;
+}
+
+.tw-follow-asside-button.--following:hover .tw-button-isFollowing{
+    display: block;
+}
+
+.tw-follow-asside-button.--following:hover .tw-button-nohovered{
+    display: none;
+}
 
 
